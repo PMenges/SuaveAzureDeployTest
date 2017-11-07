@@ -13,11 +13,9 @@ open Suave.Successful
 
 let port = Sockets.Port.Parse "8083"
 
-let homeFolder =  Some @"D:\BioProjects\Website\DnaPageSLN\DnaPageSLN\public"
-
 let serverConfig = 
     { defaultConfig with
-       homeFolder = homeFolder;
+       homeFolder = Some __SOURCE_DIRECTORY__;
        bindings = [ HttpBinding.create HTTP IPAddress.Loopback port ]}
 
 Target "run" (fun _ ->
