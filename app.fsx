@@ -4,4 +4,4 @@ open Suave
 open Suave.Web
 open Suave.Successful
 
-let app = OK "Offline Suave test"
+let app = OK "Welcome to the todo app"

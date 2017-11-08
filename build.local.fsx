@@ -1,7 +1,6 @@
 ﻿#r "packages/Suave/lib/net40/Suave.dll"
 #r "packages/FAKE/tools/FakeLib.dll"
 #load "app.fsx"
-
 open App
 open Fake
 
