@@ -14,7 +14,7 @@ open Suave.Http
 
 
 let serverConfig =
-    let port = Sockets.Port.Parse (getBuildParam "port")
+    let port = Sockets.Port.Parse (getBuildParamOrDefault "port" "8083")
     { defaultConfig with
         homeFolder = Some __SOURCE_DIRECTORY__
         bindings = [ HttpBinding.create HTTP IPAddress.Loopback port ] }
