@@ -26,4 +26,4 @@ module Main =
 
         startWebServer customConfig app
    
-        0
+        0 // Include integer as exit code
